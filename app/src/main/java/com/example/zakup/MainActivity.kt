@@ -82,10 +82,16 @@ class MainActivity : AppCompatActivity() {
 
     @SuppressLint("UseCompatLoadingForColorStateLists")
     private fun showAddMode() {
-        val checkboxesLayout = findViewById<View>(R.id.checkboxesLayout)
-        val chipsLayout = findViewById<View>(R.id.chipsLayout)
-        checkboxesLayout.visibility = View.VISIBLE
-        chipsLayout.visibility = View.GONE
+        val checkboxesLayout: View = findViewById(R.id.checkboxesLayout)
+        val chipsLayout: View = findViewById(R.id.chipsLayout)
+
+        with(checkboxesLayout) {
+            visibility = View.VISIBLE
+        }
+
+        with(chipsLayout) {
+            visibility = View.GONE
+        }
     }
 
     @SuppressLint("UseCompatLoadingForColorStateLists")
